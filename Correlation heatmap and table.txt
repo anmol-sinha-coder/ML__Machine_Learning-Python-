@@ -1,0 +1,14 @@
+import numpy as np
+import pandas as pd
+
+social1 = pd.read_csv("traincodepth.csv")
+social2 = pd.read_csv("testcodepth.csv")
+social1.describe()
+social1.info()
+import seaborn as sns
+import matplotlib.pyplot as plt
+corrmat = social1.corr()
+f,ax = plt.subplots(figsize=(12,9))
+sns.heatmap(corrmat, vmax = 0.8, square = True)
+social1.corr()
+print(social1.isnull().sum())
